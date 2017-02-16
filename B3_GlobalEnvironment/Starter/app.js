@@ -33,3 +33,25 @@ function c() {
 
 var myVar = 1;
 c();
+
+// Handling Asynchronicity
+
+// This takes three seconds to execute
+function waitThreeSeconds() {
+  var ms = 3000 + new Date().getTime();
+  while (new Date() < ms){}
+  console.log('finished function');
+}
+
+// This will only be run when the execution stack is empty, even if the click event has already happened.
+// The event queue will not be looked at until then.
+function clickHandler() {
+  console.log('click event!');
+}
+
+document.addEventListener('click', clickHandler);
+
+// This will be executed first
+waitThreeSeconds();
+// This will be executed second
+console.log('finished execution');
