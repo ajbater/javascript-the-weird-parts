@@ -27,6 +27,7 @@ function buildFunctions() {
 
 var fs = buildFunctions();
 
+// All of these will return 3, because they were all created in the same place, so it looks for i in the same spot in memory
 fs[0]();
 fs[1]();
 fs[2]();
