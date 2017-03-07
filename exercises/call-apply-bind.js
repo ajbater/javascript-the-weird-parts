@@ -26,3 +26,12 @@ var person2 = {
 
 // Here I have taken the functions from the 'person' object and am able to apply them to the 'person2' object as they have the same property names
 console.log(person.getFullName.apply(person2));
+
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// The first parameter will now always be 2
+var multiplyByTwo = multiply.bind(this, 2);
+console.log(multiplyByTwo(6));
