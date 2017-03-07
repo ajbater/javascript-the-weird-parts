@@ -28,10 +28,19 @@ var person2 = {
 console.log(person.getFullName.apply(person2));
 
 
+// Bind
+
 function multiply(a, b) {
   return a * b;
 }
 
+// Using bind to create two new functions from the multiply function
+// This is called currying
+// Currying is creating a copy of a function, but with some preset parameters
+
 // The first parameter will now always be 2
 var multiplyByTwo = multiply.bind(this, 2);
 console.log(multiplyByTwo(6));
+
+var multiplyByThree = multiply.bind(this, 3);
+console.log(multiplyByThree(2));
