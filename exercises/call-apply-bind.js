@@ -18,3 +18,11 @@ logPersonName();
 
 logName.call(person);
 logName.apply(person);
+
+var person2 = {
+  firstname: 'Someone',
+  lastname: 'Else'
+}
+
+// Here I have taken the functions from the 'person' object and am able to apply them to the 'person2' object as they have the same property names
+console.log(person.getFullName.apply(person2));
