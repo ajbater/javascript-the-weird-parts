@@ -28,6 +28,7 @@ function buildFunctions() {
 var fs = buildFunctions();
 
 // All of these will return 3, because they were all created in the same place, so it looks for i in the same spot in memory
+// It can only tell you what is in memory now, not what was in memory at the time they were created. Only what is in memory at the time when they are invoked
 fs[0]();
 fs[1]();
 fs[2]();
